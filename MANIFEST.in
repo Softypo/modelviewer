@@ -1,0 +1,11 @@
+include modelviewer/modelviewer.min.js
+include modelviewer/modelviewer.min.js.map
+include modelviewer/async-*.js
+include modelviewer/async-*.js.map
+include modelviewer/*-shared.js
+include modelviewer/*-shared.js.map
+include modelviewer/metadata.json
+include modelviewer/package-info.json
+include README.md
+include LICENSE
+include package.json
