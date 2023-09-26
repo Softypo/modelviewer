@@ -13,11 +13,14 @@ It renders an input with the property `value`
 which is editable by the user.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
+- `alt` (String; required): The src displayed in the input.
+- `exposure` (String; required): The src displayed in the input.
 - `label` (String; required): A label that will be printed when this component is rendered.
-- `value` (String; optional): The value displayed in the input.
+- `src` (String; required): The src displayed in the input.
+- `style` (Dict; optional): The src displayed in the input.
 """
 function ''_modelviewer(; kwargs...)
-        available_props = Symbol[:id, :label, :value]
+        available_props = Symbol[:id, :alt, :exposure, :label, :src, :style]
         wild_props = Symbol[]
         return Component("''_modelviewer", "ModelViewer", "modelviewer", available_props, wild_props; kwargs...)
 end

@@ -24,6 +24,7 @@
   "author": "Softypo <ggrsoft@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@google/model-viewer": "^3.2.1",
     "ramda": "^0.26.1"
   },
   "devDependencies": {

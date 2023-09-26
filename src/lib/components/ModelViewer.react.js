@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import "@google/model-viewer/dist/model-viewer";
 
 /**
  * ExampleComponent is an example component.
@@ -9,25 +10,30 @@ import PropTypes from 'prop-types';
  * which is editable by the user.
  */
 const ModelViewer = (props) => {
-    const {id, label, setProps, value} = props;
+    const { id, label, setProps, src, alt, exposure, style } = props;
 
     return (
-        <div id={id}>
+        <div id={id} style={style}>
             ExampleComponent: {label}&nbsp;
-            <input
-                value={value}
-                onChange={
-                    /*
-                        * Send the new value to the parent component.
-                        * setProps is a prop that is automatically supplied
-                        * by dash's front-end ("dash-renderer").
-                        * In a Dash app, this will update the component's
-                        * props and send the data back to the Python Dash
-                        * app server if a callback uses the modified prop as
-                        * Input or State.
-                        */
-                    e => setProps({ value: e.target.value })
-                }
+            <model-viewer
+                src={src}
+                alt={alt}
+                exposure={exposure}
+                camera-controls
+                ar
+                ar-modes="webxr"
+            // onChange={
+            //     /*
+            //         * Send the new value to the parent component.
+            //         * setProps is a prop that is automatically supplied
+            //         * by dash's front-end ("dash-renderer").
+            //         * In a Dash app, this will update the component's
+            //         * props and send the data back to the Python Dash
+            //         * app server if a callback uses the modified prop as
+            //         * Input or State.
+            //         */
+            //     e => setProps({ value: e.target.value })
+            // }
             />
         </div>
     );
@@ -47,9 +53,24 @@ ModelViewer.propTypes = {
     label: PropTypes.string.isRequired,
 
     /**
-     * The value displayed in the input.
-     */
-    value: PropTypes.string,
+     * The src displayed in the input.
+    */
+    src: PropTypes.string.isRequired,
+
+    /**
+     * The src displayed in the input.
+    */
+    alt: PropTypes.string.isRequired,
+
+    /**
+     * The src displayed in the input.
+    */
+    exposure: PropTypes.string.isRequired,
+
+    /**
+     * The src displayed in the input.
+    */
+    style: PropTypes.object,
 
     /**
      * Dash-assigned callback that should be called to report property changes

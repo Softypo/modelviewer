@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-''ModelViewer <- function(id=NULL, label=NULL, value=NULL) {
+''ModelViewer <- function(id=NULL, alt=NULL, exposure=NULL, label=NULL, src=NULL, style=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, alt=alt, exposure=exposure, label=label, src=src, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@
         props = props,
         type = 'ModelViewer',
         namespace = 'modelviewer',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'alt', 'exposure', 'label', 'src', 'style'),
         package = 'modelviewer'
         )
 

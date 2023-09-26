@@ -18,12 +18,33 @@
         "required": true,
         "description": "A label that will be printed when this component is rendered."
       },
-      "value": {
+      "src": {
         "type": {
           "name": "string"
         },
+        "required": true,
+        "description": "The src displayed in the input."
+      },
+      "alt": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The src displayed in the input."
+      },
+      "exposure": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The src displayed in the input."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
         "required": false,
-        "description": "The value displayed in the input."
+        "description": "The src displayed in the input."
       },
       "setProps": {
         "type": {
