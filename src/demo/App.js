@@ -5,10 +5,16 @@ import { ModelViewer } from '../lib';
 
 const App = () => {
 
-    const [state, setState] = useState({value:'', label:'Type Here'});
+    const [state, setState] = useState({
+        id: 'Type Here',
+        src: 'assets/M08.glb',
+        alt: "A rock",
+        exposure: "0.008",
+        style: { "width": "100%", "height": "100%" },
+    });
     const setProps = (newProps) => {
-            setState(newProps);
-        };
+        setState(newProps);
+    };
 
     return (
         <div>
