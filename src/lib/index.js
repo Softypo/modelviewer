@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import ModelViewer from './components/ModelViewer.react';
+import Modelviewer from './components/Modelviewer.react';
 
 export {
-    ModelViewer
+    Modelviewer
 };

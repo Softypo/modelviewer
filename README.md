@@ -1,6 +1,6 @@
-# ModelViewer
+# Modelviewer
 
-ModelViewer is a Dash component library.
+Modelviewer is a Dash component library.
 
 Get started with:
 1. Install Dash and its dependencies: https://dash.plotly.com/installation
@@ -35,7 +35,7 @@ If you have selected install_dependencies during the prompt, you can skip this p
     $ pip install -r tests/requirements.txt
     ```
 
-### Write your component code in `src/lib/components/ModelViewer.react.js`.
+### Write your component code in `src/lib/components/Modelviewer.react.js`.
 
 - The demo app is in `src/demo` and you will import your example component code into your demo app.
 - Test your code in a Python environment:

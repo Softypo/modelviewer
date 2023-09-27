@@ -1,7 +1,7 @@
 /* eslint no-magic-numbers: 0 */
 import React, { useState } from 'react';
 
-import { ModelViewer } from '../lib';
+import { Modelviewer } from '../lib';
 
 const App = () => {
 
@@ -18,7 +18,7 @@ const App = () => {
 
     return (
         <div>
-            <ModelViewer
+            <Modelviewer
                 setProps={setProps}
                 {...state}
             />

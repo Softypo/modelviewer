@@ -1,17 +1,16 @@
 % Auto-generated: do not edit by hand
-\name{''ModelViewer}
+\name{''Modelviewer}
 
-\alias{''ModelViewer}
+\alias{''Modelviewer}
 
-\title{ModelViewer component}
+\title{Modelviewer component}
 
 \description{
 ExampleComponent is an example component. It takes a property, `label`, and displays it. It renders an input with the property `value` which is editable by the user.
 }
 
 \usage{
-''ModelViewer(id=NULL, alt=NULL, exposure=NULL, label=NULL, src=NULL,
-style=NULL)
+''Modelviewer(id=NULL, alt=NULL, exposure=NULL, src=NULL, style=NULL)
 }
 
 \arguments{
@@ -20,8 +19,6 @@ style=NULL)
 \item{alt}{Character. The src displayed in the input.}
 
 \item{exposure}{Character. The src displayed in the input.}
-
-\item{label}{Character. A label that will be printed when this component is rendered.}
 
 \item{src}{Character. The src displayed in the input.}
 

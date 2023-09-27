@@ -9,7 +9,7 @@ import "@google/model-viewer/dist/model-viewer";
  * It renders an input with the property `value`
  * which is editable by the user.
  */
-const ModelViewer = (props) => {
+const Modelviewer = (props) => {
     const { id, setProps, src, alt, exposure, style } = props;
 
     return (
@@ -37,9 +37,9 @@ const ModelViewer = (props) => {
     );
 }
 
-ModelViewer.defaultProps = {};
+Modelviewer.defaultProps = {};
 
-ModelViewer.propTypes = {
+Modelviewer.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
@@ -72,4 +72,4 @@ ModelViewer.propTypes = {
     setProps: PropTypes.func
 };
 
-export default ModelViewer;
+export default Modelviewer;
