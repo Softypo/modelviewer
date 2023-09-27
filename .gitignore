@@ -153,6 +153,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+deps/
+inst/
 build/
 develop-eggs/
 dist/

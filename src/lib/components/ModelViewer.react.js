@@ -10,32 +10,30 @@ import "@google/model-viewer/dist/model-viewer";
  * which is editable by the user.
  */
 const ModelViewer = (props) => {
-    const { id, label, setProps, src, alt, exposure, style } = props;
+    const { id, setProps, src, alt, exposure, style } = props;
 
     return (
-        <div id={id} style={style}>
-            ExampleComponent: {label}&nbsp;
-            <model-viewer
-                src={src}
-                alt={alt}
-                exposure={exposure}
-                camera-controls
-                ar
-                ar-modes="webxr"
-            // onChange={
-            //     /*
-            //         * Send the new value to the parent component.
-            //         * setProps is a prop that is automatically supplied
-            //         * by dash's front-end ("dash-renderer").
-            //         * In a Dash app, this will update the component's
-            //         * props and send the data back to the Python Dash
-            //         * app server if a callback uses the modified prop as
-            //         * Input or State.
-            //         */
-            //     e => setProps({ value: e.target.value })
-            // }
-            />
-        </div>
+        <model-viewer
+            id={id}
+            src={src}
+            alt={alt}
+            exposure={exposure}
+            camera-controls
+            ar-modes="webxr"
+            style={style}
+        // onChange={
+        //     /*
+        //         * Send the new value to the parent component.
+        //         * setProps is a prop that is automatically supplied
+        //         * by dash's front-end ("dash-renderer").
+        //         * In a Dash app, this will update the component's
+        //         * props and send the data back to the Python Dash
+        //         * app server if a callback uses the modified prop as
+        //         * Input or State.
+        //         */
+        //     e => setProps({ value: e.target.value })
+        // }
+        />
     );
 }
 
@@ -46,11 +44,6 @@ ModelViewer.propTypes = {
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
-
-    /**
-     * A label that will be printed when this component is rendered.
-     */
-    label: PropTypes.string.isRequired,
 
     /**
      * The src displayed in the input.

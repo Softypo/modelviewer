@@ -9,19 +9,18 @@ app.layout = html.Div([
         src='assets/M08.glb',
         alt="A rock",
         exposure="0.008",
-        label='gg-label',
         style={"width": "100%", "height": "100%"},
-
     ),
     html.Div(id='output')
 ],
-    style={"width": "100%", "height": "100%"},
+    style={"position": "absolute", "top": "0px", "left": "0px",
+           "width": "100%", "height": "100%", "background-color": "slate"},
 )
 
 
-# @callback(Output('output', 'children'), Input('input', 'value'))
-# def display_output(value):
-#     return 'You have entered {}'.format(value)
+@callback(Output('output', 'children'), Input('input', 'value'))
+def display_output(value):
+    return 'You have entered {}'.format(value)
 
 
 if __name__ == '__main__':
