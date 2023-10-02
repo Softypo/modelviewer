@@ -6,15 +6,16 @@ app = Dash(__name__)
 app.layout = html.Div([
     modelviewer.Modelviewer(
         id='input',
-        src='assets/M08.glb',
+        src='assets/girls_frontline.glb',
         alt="A rock",
-        exposure="0.008",
+        exposure=1,
+        autoplay=True,
         style={"width": "100%", "height": "100%"},
     ),
     html.Div(id='output')
 ],
     style={"position": "absolute", "top": "0px", "left": "0px",
-           "width": "100%", "height": "100%", "background-color": "slate"},
+           "width": "100%", "height": "100%", "backgroundColor": "slate"},
 )
 
 
