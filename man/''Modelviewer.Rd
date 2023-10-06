@@ -54,7 +54,7 @@ xr_environment=NULL, zoom_sensitivity=NULL)
 
 \item{ar_tracking}{A value equal to: "n/a", "tracking", "not-tracking". This read-only attribute enables DOM content to be styled based on the state of the WebXR AR tracking. For instance, a failure message can be shown by scoping a CSS rule to model-viewer[ar-tracking="not-tracking"]. Setting this attribute has no effect. Most AR tracking failures are due to the camera being covered or seeing little discernable texture.}
 
-\item{auto_rotate}{Character. Enables the auto-rotation of the model.}
+\item{auto_rotate}{Logical. Enables the auto-rotation of the model.}
 
 \item{auto_rotate_delay}{Numeric. Sets the delay before auto-rotation begins. The format of the value is a number in milliseconds.}
 

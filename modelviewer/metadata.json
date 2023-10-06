@@ -156,7 +156,7 @@
       },
       "auto_rotate": {
         "type": {
-          "name": "string"
+          "name": "bool"
         },
         "required": false,
         "description": "Enables the auto-rotation of the model."

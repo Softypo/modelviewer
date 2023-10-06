@@ -4,7 +4,7 @@ from dash.development.base_component import Component, _explicitize_args
 
 
 class Modelviewer(Component):
-    """google's model-viewer dash component.
+    """A Modelviewer component.
 
 
 Keyword arguments:
@@ -74,7 +74,7 @@ Keyword arguments:
     has no effect. Most AR tracking failures are due to the camera
     being covered or seeing little discernable texture.
 
-- auto_rotate (string; optional):
+- auto_rotate (boolean; optional):
     Enables the auto-rotation of the model.
 
 - auto_rotate_delay (number; optional):
@@ -336,15 +336,12 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'modelviewer'
     _type = 'Modelviewer'
-
     @_explicitize_args
     def __init__(self, children=None, id=Component.REQUIRED, src=Component.REQUIRED, alt=Component.UNDEFINED, poster=Component.UNDEFINED, loading=Component.UNDEFINED, reveal=Component.UNDEFINED, with_credentials=Component.UNDEFINED, camera_controls=Component.UNDEFINED, disable_pan=Component.UNDEFINED, disable_tap=Component.UNDEFINED, touch_action=Component.UNDEFINED, disable_zoom=Component.UNDEFINED, orbit_sensitivity=Component.UNDEFINED, zoom_sensitivity=Component.UNDEFINED, pan_sensitivity=Component.UNDEFINED, auto_rotate=Component.UNDEFINED, auto_rotate_delay=Component.UNDEFINED, rotation_per_second=Component.UNDEFINED, interaction_prompt=Component.UNDEFINED, interaction_prompt_style=Component.UNDEFINED, interaction_prompt_threshold=Component.UNDEFINED, camera_orbit=Component.UNDEFINED, camera_target=Component.UNDEFINED, field_of_view=Component.UNDEFINED, max_camera_orbit=Component.UNDEFINED, min_camera_orbit=Component.UNDEFINED, max_field_of_view=Component.UNDEFINED, min_field_of_view=Component.UNDEFINED, interpolation_decay=Component.UNDEFINED, skybox_image=Component.UNDEFINED, environment_image=Component.UNDEFINED, exposure=Component.UNDEFINED, shadow_intensity=Component.UNDEFINED, shadow_softness=Component.UNDEFINED, animation_name=Component.UNDEFINED, animation_crossfade_duration=Component.UNDEFINED, autoplay=Component.UNDEFINED, variant_name=Component.UNDEFINED, orientation=Component.UNDEFINED, scale=Component.UNDEFINED, ar=Component.UNDEFINED, ar_modes=Component.UNDEFINED, ar_scale=Component.UNDEFINED, ar_placement=Component.UNDEFINED, ios_src=Component.UNDEFINED, xr_environment=Component.UNDEFINED, ar_status=Component.UNDEFINED, ar_tracking=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'alt', 'animation_crossfade_duration', 'animation_name', 'ar', 'ar_modes', 'ar_placement', 'ar_scale', 'ar_status', 'ar_tracking', 'auto_rotate', 'auto_rotate_delay', 'autoplay', 'camera_controls', 'camera_orbit', 'camera_target', 'disable_pan', 'disable_tap', 'disable_zoom', 'environment_image', 'exposure', 'field_of_view', 'interaction_prompt', 'interaction_prompt_style',
-                            'interaction_prompt_threshold', 'interpolation_decay', 'ios_src', 'loading', 'max_camera_orbit', 'max_field_of_view', 'min_camera_orbit', 'min_field_of_view', 'orbit_sensitivity', 'orientation', 'pan_sensitivity', 'poster', 'reveal', 'rotation_per_second', 'scale', 'shadow_intensity', 'shadow_softness', 'skybox_image', 'src', 'style', 'touch_action', 'variant_name', 'with_credentials', 'xr_environment', 'zoom_sensitivity']
-        self._valid_wildcard_attributes = []
-        self.available_properties = ['children', 'id', 'alt', 'animation_crossfade_duration', 'animation_name', 'ar', 'ar_modes', 'ar_placement', 'ar_scale', 'ar_status', 'ar_tracking', 'auto_rotate', 'auto_rotate_delay', 'autoplay', 'camera_controls', 'camera_orbit', 'camera_target', 'disable_pan', 'disable_tap', 'disable_zoom', 'environment_image', 'exposure', 'field_of_view', 'interaction_prompt', 'interaction_prompt_style',
-                                     'interaction_prompt_threshold', 'interpolation_decay', 'ios_src', 'loading', 'max_camera_orbit', 'max_field_of_view', 'min_camera_orbit', 'min_field_of_view', 'orbit_sensitivity', 'orientation', 'pan_sensitivity', 'poster', 'reveal', 'rotation_per_second', 'scale', 'shadow_intensity', 'shadow_softness', 'skybox_image', 'src', 'style', 'touch_action', 'variant_name', 'with_credentials', 'xr_environment', 'zoom_sensitivity']
-        self.available_wildcard_properties = []
+        self._prop_names = ['children', 'id', 'alt', 'animation_crossfade_duration', 'animation_name', 'ar', 'ar_modes', 'ar_placement', 'ar_scale', 'ar_status', 'ar_tracking', 'auto_rotate', 'auto_rotate_delay', 'autoplay', 'camera_controls', 'camera_orbit', 'camera_target', 'disable_pan', 'disable_tap', 'disable_zoom', 'environment_image', 'exposure', 'field_of_view', 'interaction_prompt', 'interaction_prompt_style', 'interaction_prompt_threshold', 'interpolation_decay', 'ios_src', 'loading', 'max_camera_orbit', 'max_field_of_view', 'min_camera_orbit', 'min_field_of_view', 'orbit_sensitivity', 'orientation', 'pan_sensitivity', 'poster', 'reveal', 'rotation_per_second', 'scale', 'shadow_intensity', 'shadow_softness', 'skybox_image', 'src', 'style', 'touch_action', 'variant_name', 'with_credentials', 'xr_environment', 'zoom_sensitivity']
+        self._valid_wildcard_attributes =            []
+        self.available_properties = ['children', 'id', 'alt', 'animation_crossfade_duration', 'animation_name', 'ar', 'ar_modes', 'ar_placement', 'ar_scale', 'ar_status', 'ar_tracking', 'auto_rotate', 'auto_rotate_delay', 'autoplay', 'camera_controls', 'camera_orbit', 'camera_target', 'disable_pan', 'disable_tap', 'disable_zoom', 'environment_image', 'exposure', 'field_of_view', 'interaction_prompt', 'interaction_prompt_style', 'interaction_prompt_threshold', 'interpolation_decay', 'ios_src', 'loading', 'max_camera_orbit', 'max_field_of_view', 'min_camera_orbit', 'min_field_of_view', 'orbit_sensitivity', 'orientation', 'pan_sensitivity', 'poster', 'reveal', 'rotation_per_second', 'scale', 'shadow_intensity', 'shadow_softness', 'skybox_image', 'src', 'style', 'touch_action', 'variant_name', 'with_credentials', 'xr_environment', 'zoom_sensitivity']
+        self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
         _locals.update(kwargs)  # For wildcard attrs and excess named props

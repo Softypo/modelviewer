@@ -132,7 +132,7 @@ Modelviewer.propTypes = {
     /**
      * Enables the auto-rotation of the model.
     */
-    auto_rotate: PropTypes.string,
+    auto_rotate: PropTypes.bool,
 
     /**
     * Sets the delay before auto-rotation begins. The format of the value is a number in milliseconds.
